@@ -1,0 +1,82 @@
+# SOC L1 Alert Reporting & Escalation (Foundational Overview)
+
+## Overview
+Alert reporting and escalation are essential SOC Level 1 responsibilities.  
+This document explains how to write clear alert comments, structure professional reports, escalate alerts properly, and communicate with other teams.
+
+This content complements the SOC L1 Alert Triage workflow.
+
+---
+
+## 1. Purpose of Alert Reporting
+SOC L1 analysts write reports when:
+
+- The alert is a **True Positive**  
+- L2 analysts need context for deeper investigation  
+- Remediation or containment may be required  
+- Long-term alert context must be preserved  
+
+### Why reporting matters
+
+| Purpose | Value |
+|--------|--------|
+| Provide context for L2 | Prevents repeated analysis and saves time |
+| Preserve findings | Alerts remain indefinitely; logs may expire |
+| Improve analyst clarity | Writing reinforces structured analytical thinking |
+
+---
+
+## 2. The 5 Ws Reporting Framework
+A strong alert report answers:
+
+- **Who** – the user or entity involved  
+- **What** – the suspicious activity or event  
+- **When** – timeline (start and end time)  
+- **Where** – hostname, IP, system, website  
+- **Why** – reasoning behind your verdict (most important)
+
+Reports must be concise, accurate, and self-contained.
+
+---
+
+## 3. When to Escalate
+Escalate alerts when:
+
+- A major cyberattack is possible  
+- Host isolation or credential reset is required  
+- Malware or persistence is suspected  
+- Critical assets/business services are impacted  
+- You need senior guidance  
+
+### Escalation Flow
+1. Write a clear, complete alert report  
+2. Assign the alert to the on-shift L2 analyst  
+3. Notify L2 (chat or verbal)  
+4. Provide any additional context requested  
+5. L2 conducts deeper analysis and remediation  
+
+---
+
+## 4. Communication Best Practices
+SOC analysts regularly collaborate with IT, HR, system owners, cloud teams, and management.
+
+Recommended guidelines:
+
+- Do **not** contact users through compromised accounts  
+- Use emergency contacts if L2 is unreachable during a critical alert  
+- Inform L2 if you are overwhelmed by sudden alert spikes  
+- Report misclassifications immediately  
+- Notify SOC engineers if logs are missing or SIEM parsing breaks  
+
+Clear communication helps prevent miscoordination during real attacks.
+
+---
+
+## Conclusion
+Alert reporting and escalation complete the SOC L1 workflow:
+
+- Writing clear, structured reports  
+- Escalating alerts appropriately  
+- Communicating effectively with other teams  
+
+These skills help ensure efficient triage, investigation, and incident handling across the SOC.
