@@ -1,28 +1,89 @@
-Overview
+# SOC L1 Alert Triage (Foundational Workflow Overview)
 
-This document explains how alerts are formed, prioritized, and triaged by SOC Level 1 analysts.
-It covers the end-to-end workflow from event generation → alert creation → prioritisation → triage → final verdict.
+## Overview
+This document explains how alerts are formed, prioritized, and triaged by SOC Level 1 analysts.  
+It covers the workflow from event creation → alert generation → prioritization → triage → final verdict.
 
-This material sets the foundation for all technical projects in this portfolio (Splunk, Elastic, Wireshark, endpoint detection, phishing, etc.).
+This foundational knowledge prepares for all technical projects in this portfolio (Splunk, Elastic, Wireshark, endpoint detection, phishing, etc.).
 
 ---
 
 ## 1. From Events to Alerts
+Security alerts originate from normal system activity:
 
-Security alerts originate from routine system activity:
-
-Event occurs
-Examples: user login, process creation, file download.
-
-The system logs the event
-Windows, Linux, firewalls, email gateways, cloud services, etc.
-
-Logs are shipped into a security solution
-Typically a SIEM, EDR, NDR, or SOAR.
-
-Detection rules evaluate the logs
-When unusual or suspicious patterns match a rule → an alert is generated.
-
-Alerts allow analysts to review dozens of items instead of millions of raw logs.
+1. An **event** occurs (login, process creation, file download).  
+2. The system logs the event.  
+3. Logs are forwarded to a **SIEM**, **EDR**, or **NDR**.  
+4. Detection rules evaluate the logs and generate an **alert**.  
+5. Alerts surface suspicious activity so analysts don’t manually review millions of logs.
 
 ---
+
+## 2. Alert Management Platforms
+Alerts may appear in:
+
+- **SIEM** (Splunk ES, Elastic)  
+- **EDR/NDR** (Microsoft Defender, CrowdStrike)  
+- **SOAR** (Splunk SOAR, Cortex)  
+- **ITSM systems** (TheHive, Jira)
+
+Most SOCs centralize alerts in SIEM or SOAR for consistent triage.
+
+---
+
+## 3. Alert Properties
+Common alert fields:
+
+- **Alert Time** – when the alert triggered  
+- **Alert Name** – summary of suspicious behavior  
+- **Severity** – Low to Critical  
+- **Status** – New → In Progress → Resolved  
+- **Verdict** – True Positive / False Positive  
+- **Assignee** – analyst responsible for triage  
+- **Description** – detection logic + explanation  
+- **Alert Fields** – hostname, user, IP, command line, file hash, etc.
+
+---
+
+## 4. Alert Prioritization
+To manage large alert volumes, analysts follow a standard priority order:
+
+1. **Filter** alerts already assigned  
+2. **Sort by severity** (Critical → Low)  
+3. **Sort by age** (oldest first)
+
+This ensures fast response to critical or time-sensitive threats.
+
+---
+
+## 5. Triage Workflow
+
+### **Initial Actions**
+- Assign the alert to yourself  
+- Change status to **In Progress**  
+- Review alert name, description, severity, and indicators  
+
+### **Investigation**
+- Identify the affected user/host  
+- Understand what the alert describes (login anomaly, malware, phishing, etc.)  
+- Review surrounding events before/after the alert  
+- Use threat intelligence (IPs, domains, hashes)  
+- Compare activity against normal behavior baselines  
+
+### **Final Actions**
+- Determine **True Positive** or **False Positive**  
+- Clearly document your reasoning  
+- Close the alert or escalate  
+- Update alert status accordingly  
+
+---
+
+## Conclusion
+This triage workflow demonstrates core L1 responsibilities:
+
+- Understanding alert context  
+- Prioritizing effectively  
+- Conducting structured investigation  
+- Making correct verdict decisions  
+
+This serves as the starting point for deeper technical projects in the portfolio.
