@@ -1,12 +1,33 @@
 # Phishing Analysis – Greenholt Scenario
 
-## Summary
-A financial-themed email claiming to reference a wire transfer was reviewed to determine whether it was real.
-The message was confirmed to be a phishing attempt intended to deliver a malicious attachment.
+## Overview
+This project analyzes a financial-themed email claiming to reference a wire transfer.
+The goal is to determine whether the message is real or part of a phishing attempt, and to document the findings the way a SOC analyst would in a real investigation.
+
+The analysis is based on review of the email content, headers, and the attached file.
+
+---
+
+## Objective
+Assess a suspicious email and decide whether it represents a legitimate business message or a phishing attempt, using common email analysis techniques and supporting evidence.
+
+---
+
+## Phishing Analysis Approach
+When reviewing a potentially malicious email, SOC analysts typically focus on a few core areas:
+
+- Who the sender claims to be and whether that identity can be trusted  
+- How replies are handled and whether they align with the sender’s domain  
+- Where the email originated from at the infrastructure level  
+- What the attachment or link actually contains, not just how it is labeled  
+- Whether the message uses urgency or financial pressure to influence the recipient  
+
+This approach helps separate legitimate business emails from impersonation and malware delivery attempts.
 
 ---
 
 ## Key Findings (red flags)
+The following red flags were identified during review of the email and its attachment.
 
 - The sender claimed to be from `mutawamarine.com`, but replies were redirected to a different domain, which is a strong sign of impersonation.
 
@@ -25,9 +46,8 @@ The message was confirmed to be a phishing attempt intended to deliver a malicio
 ---
 
 ## Conclusion
-**Confirmed phishing email (malware delivery attempt).**
-
-Taken together, the sender behavior, infrastructure mismatch, and deceptive attachment format clearly point to malicious intent.
+This was confirmed to be a phishing email attempting to deliver malware.
+The sender behavior, infrastructure mismatch, and deceptive attachment format all point to malicious intent.
 
 ---
 
