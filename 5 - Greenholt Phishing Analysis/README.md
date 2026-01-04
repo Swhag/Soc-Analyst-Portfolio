@@ -31,7 +31,7 @@ The following red flags were identified during review of the email and its attac
 
 - The sender claimed to be from `mutawamarine.com`, but replies were redirected to a different domain, which is a strong sign of impersonation.
 
-
+<img src="images/reply_to_mismatch.png" width="700">
 
 - The originating IP resolved to a generic hosting provider rather than real corporate mail infrastructure.
 
