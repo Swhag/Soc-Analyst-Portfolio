@@ -7,13 +7,21 @@ The message was confirmed as a phishing attempt designed to deliver a malicious 
 ---
 
 ## Key Findings (red flags)
+
 - The sender claimed to be from `mutawamarine.com`, but replies were redirected to a different domain, indicating impersonation.
-![Reply-To domain mismatch shown in email headers](images/reply_to_mismatch.png)
+
+<img src="images/reply_to_mismatch.png" width="700">
+
 - The originating IP resolved to a generic hosting provider rather than corporate mail infrastructure.
-![Originating IP resolving to hosting provider](images/originating_ip.png)
+
+<img src="images/originating_ip.png" width="700">
+
 - The attachment appeared to be a PDF but was actually a compressed RAR archive, a common malware delivery tactic.
-![Attachment file type mismatch](images/attachment_filetype.png)
+
+<img src="images/attachment_filetype.png" width="700">
+
 - The financial pretext was designed to pressure the recipient into opening the attachment quickly.
+
 
 ---
 
