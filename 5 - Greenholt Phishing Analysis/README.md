@@ -7,7 +7,7 @@ It documents how the email was reviewed and why it was ultimately treated as phi
 ---
 
 ## Objective
-Assess a suspicious email and decide whether it represents a legitimate business message or a phishing attempt, using common email analysis techniques and supporting evidence.
+Analyze the email to determine whether it was real or a phishing attempt and decide whether it required action or could be safely ignored.
 
 ---
 
