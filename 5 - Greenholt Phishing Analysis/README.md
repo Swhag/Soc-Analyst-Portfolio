@@ -1,10 +1,8 @@
 # Phishing Analysis – Greenholt Scenario
 
 ## Overview
-This project analyzes a financial-themed email claiming to reference a wire transfer.
-The goal is to determine whether the message is real or part of a phishing attempt, and to document the findings the way a SOC analyst would in a real investigation.
-
-The analysis is based on review of the email content, headers, and the attached file.
+This project looks at a financial-themed email that claimed to reference a wire transfer.
+It documents how the email was reviewed and why it was ultimately treated as phishing, using the same kind of evidence a SOC analyst would rely on during a real investigation.
 
 ---
 
