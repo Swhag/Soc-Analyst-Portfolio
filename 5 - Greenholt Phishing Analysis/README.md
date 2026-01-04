@@ -9,6 +9,8 @@ It documents how the email was reviewed and why it was ultimately treated as phi
 ## Objective
 Analyze the email to determine whether it was real or a phishing attempt and decide whether it required action or could be safely ignored.
 
+<img src="images/original_email.png" width="700">
+
 ---
 
 ## Phishing Analysis Approach
