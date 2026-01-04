@@ -18,3 +18,16 @@ This project builds on foundational alert triage knowledge and prepares for emai
 The investigation was initiated to determine whether the email represented a legitimate message or a malicious phishing attempt.
 
 ---
+
+## 2. Phishing Investigation Workflow
+A standard phishing investigation follows a structured process:
+
+1. Review email content for social engineering indicators  
+2. Review email headers to validate sender authenticity  
+3. Extract indicators such as domains and URLs  
+4. Perform threat intelligence enrichment  
+5. Determine verdict and document findings  
+
+This workflow ensures consistent, evidence-based decisions.
+
+---
