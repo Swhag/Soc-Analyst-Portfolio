@@ -40,4 +40,4 @@ The combination of sender impersonation, infrastructure mismatch, and deceptive 
 ---
 
 ## Takeaway
-This case highlights how phishing emails can appear legitimate at first glance and why small inconsistencies—such as reply-to behavior and attachment format—are critical in reaching a confident verdict.
+This case highlights how phishing emails can appear legitimate at first glance and why small inconsistencies such as reply-to behavior and attachment format are critical in reaching a confident verdict.
