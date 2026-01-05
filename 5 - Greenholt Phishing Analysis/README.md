@@ -14,13 +14,14 @@ Analyze the email to determine whether it was real or a phishing attempt and dec
 ---
 
 ## Phishing Analysis Approach
-When reviewing a potentially malicious email, SOC analysts typically focus on a few core areas:
 
-- Who the sender claims to be and whether that identity can be trusted  
-- How replies are handled and whether they align with the sender’s domain  
-- Where the email originated from at the infrastructure level  
-- What the attachment or link actually contains, not just how it is labeled  
-- Whether the message uses urgency or financial pressure to influence the recipient  
+When reviewing a potentially malicious email, SOC analysts typically focus on a few core questions:
+
+- Who does the sender claim to be and can that identity be trusted?
+- Where are replies actually routed and does this match the sender’s domain?
+- Where did the email originate from at the infrastructure level?
+- What does the attachment or link actually contain, not just what it is labeled as?
+- Does the message create false urgency or financial pressure to influence the recipient?
 
 This approach helps separate legitimate business emails from impersonation and malware delivery attempts.
 
@@ -41,13 +42,13 @@ The following red flags were identified during review of the email and its attac
 
 <img src="images/attachment_filetype.png" width="700">
 
-- The email used a fake wire transfer to pressure the recipient into opening the attachment quickly.
+- The email used a fake wire transfer to create a sense of urgency and pressure the recipient to open the attachment
 
 ---
 
 ## Conclusion
 This was confirmed to be a phishing email attempting to deliver malware.
-The sender behavior, infrastructure mismatch, and deceptive attachment format all point to malicious intent.
+The sender behavior, infrastructure mismatch and deceptive attachment format all point to malicious intent.
 
 ---
 
@@ -59,4 +60,4 @@ The sender behavior, infrastructure mismatch, and deceptive attachment format al
 ---
 
 ## Takeaway
-This scenario shows how phishing emails can look real at first glance, and how small details such as reply to behavior and attachment format are often what make the difference when reaching a confident conclusion.
+This scenario shows how phishing emails can look real at first glance and how small details such as reply to behavior and attachment format are often what make the difference when reaching a confident conclusion.
