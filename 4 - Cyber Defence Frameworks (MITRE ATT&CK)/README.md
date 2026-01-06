@@ -1,14 +1,12 @@
 # Cyber Defence Frameworks (MITRE ATT&CK)
 
 ## Overview
-This project explores the MITRE ATT&CK framework and how it is used in real SOC workflows to understand, investigate and communicate attacker behavior. The focus is on how analysts apply ATT&CK to add context to alerts, map threat activity, and support detection and response efforts.
-
-Rather than treating ATT&CK as a theory only framework, this project looks at it from a practical defensive perspective.
+This project explores the MITRE ATT&CK framework and its role in modern SOC operations. It covers how ATT&CK organizes adversary behavior into tactics and techniques and why this framework is widely used across defensive security teams.
 
 ---
 
 ## 1. Objective
-Develop a working understanding of the MITRE ATT&CK framework and demonstrate how attacker behavior can be mapped to tactics and techniques during investigations.
+Demonstrate the ability to analyze attacker activity and map observed behavior to MITRE ATT&CK tactics and techniques during a security investigation.
 
 ---
 
