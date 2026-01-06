@@ -16,7 +16,7 @@ Demonstrate the ability to analyze attacker activity and map observed behavior t
 MITRE is a non for-profit organization that develops research based frameworks and tools used across the cyber security industry. Many of these resources are widely adopted by SOCs, threat intelligence teams, and security vendors.
 
 ### MITRE ATT&CK
-MITRE ATT&CK is a globally accessible knowledge base of adversary tactics and techniques based on real-world attacks. It provides a consistent way to describe how attackers operate and is commonly used to:
+MITRE ATT&CK is a globally accessible knowledge base of adversary tactics and techniques based on real world attacks. It provides a consistent way to describe how attackers operate and is commonly used to:
 - Add context to alerts and incidents
 - Map attacker behavior during investigations
 - Improve detection coverage and response planning
@@ -25,15 +25,18 @@ MITRE ATT&CK is a globally accessible knowledge base of adversary tactics and te
 
 ## 3. Core ATT&CK Concepts
 
-### Tactics
-Tactics represent the **goal** an attacker is trying to achieve at a given stage of an attack (the “why”), such as Initial Access, Persistence, or Defense Evasion.
+MITRE ATT&CK organizes adversary behavior using three core concepts:
 
-### Techniques
-Techniques describe **how** the attacker accomplishes that goal.  
-Each technique has a unique ID (for example, `T1566`) and may include multiple sub-techniques.
+- **Tactics**  
+  The adversary’s objective or goal at a specific stage of an attack.
 
-### Procedures
-Procedures are the real-world implementation of a technique, often tied to specific tools, malware, or threat groups.
+- **Techniques**  
+  The methods used to achieve that objective. Each technique is assigned a unique ID.
+
+- **Procedures**  
+  The real-world execution of a technique, often tied to specific tools, malware, or threat groups.
+
+This structure allows analysts to describe attacks in a clear and consistent way.
 
 ---
 
@@ -48,6 +51,25 @@ The ATT&CK Navigator is commonly used to:
 - Visualize attack paths
 - Review detection coverage across tactics
 
-SOC teams often use the Navigator during investigations, threat research, and post-incident reviews.
+SOC teams often use the Navigator during investigations, threat research, and post incident reviews.
+
+---
+
+## 5. Mapping Threat Intelligence to ATT&CK
+
+### Why Mapping Matters
+Threat intelligence reports often describe attacker activity in narrative form. Mapping that activity to ATT&CK techniques allows defenders to:
+- Standardize how attacks are described
+- Add meaningful context to alerts
+- Translate intelligence into detections and response actions
+
+### Example Use Case
+When analyzing a known threat group, analysts can map observed behavior such as:
+- Initial access via phishing
+- Persistence mechanisms
+- Defense evasion techniques
+- Command-and-control methods
+
+This structured approach helps identify defensive gaps and improve future readiness.
 
 ---
