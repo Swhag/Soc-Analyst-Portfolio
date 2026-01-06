@@ -3,7 +3,7 @@
 ## Overview
 This project explores the MITRE ATT&CK framework and how it is used in real SOC workflows to understand, investigate and communicate attacker behavior. The focus is on how analysts apply ATT&CK to add context to alerts, map threat activity, and support detection and response efforts.
 
-Rather than treating ATT&CK as a theory-only framework, this project looks at it from a practical defensive perspective.
+Rather than treating ATT&CK as a theory only framework, this project looks at it from a practical defensive perspective.
 
 ---
 
