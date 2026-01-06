@@ -73,3 +73,55 @@ When analyzing a known threat group, analysts can map observed behavior such as:
 This structured approach helps identify defensive gaps and improve future readiness.
 
 ---
+
+
+## 6. ATT&CK in SOC Operations
+
+ATT&CK is used across multiple security roles:
+
+- **SOC Analysts**  
+  Map alerts and events to tactics and techniques to improve triage and prioritization.
+
+- **Threat Intelligence Teams**  
+  Build threat profiles by mapping observed behavior to ATT&CK.
+
+- **Detection Engineers**  
+  Align SIEM and EDR rules with ATT&CK techniques to ensure meaningful coverage.
+
+- **Incident Responders**  
+  Use ATT&CK to visualize attack progression during investigations.
+
+---
+
+## 7. MITRE CAR (Cyber Analytics Repository)
+
+### CAR Overview
+MITRE CAR is a collection of detection analytics mapped to ATT&CK techniques. Each analytic explains:
+- What behavior to detect
+- Why it matters
+- How it maps back to ATT&CK
+
+### Defensive Value
+CAR helps bridge the gap between ATT&CK theory and real detections.  
+Many analytics include example queries for tools like Splunk, allowing ATT&CK techniques to be turned into practical SIEM detections.
+
+---
+
+## 8. MITRE D3FEND (Defensive View)
+
+### D3FEND Overview
+MITRE D3FEND focuses on defensive techniques and countermeasures. It provides a structured way to describe how security controls detect, deny, or disrupt attacker activity.
+
+### ATT&CK and D3FEND Together
+Using both frameworks together allows defenders to understand:
+- What the attacker is doing (ATT&CK)
+- How defenders can respond or mitigate it (D3FEND)
+
+---
+
+## 9. Key Takeaways
+- MITRE ATT&CK provides a common language for describing attacker behavior  
+- Mapping activity to ATT&CK adds clarity and context to SOC investigations  
+- ATT&CK is widely used across SOC, CTI, detection engineering, and incident response  
+- MITRE CAR helps translate ATT&CK techniques into real detections  
+- MITRE D3FEND complements ATT&CK by focusing on defensive controls  
