@@ -22,3 +22,32 @@ MITRE ATT&CK is a globally accessible knowledge base of adversary tactics and te
 - Improve detection coverage and response planning
 
 ---
+
+## 3. Core ATT&CK Concepts
+
+### Tactics
+Tactics represent the **goal** an attacker is trying to achieve at a given stage of an attack (the “why”), such as Initial Access, Persistence, or Defense Evasion.
+
+### Techniques
+Techniques describe **how** the attacker accomplishes that goal.  
+Each technique has a unique ID (for example, `T1566`) and may include multiple sub-techniques.
+
+### Procedures
+Procedures are the real-world implementation of a technique, often tied to specific tools, malware, or threat groups.
+
+---
+
+## 4. ATT&CK Matrix and Navigator
+
+### ATT&CK Matrix
+The ATT&CK Matrix visually organizes tactics across the top and techniques underneath each tactic. This layout makes it easier to understand how attacks progress and where activity fits in the broader lifecycle.
+
+### ATT&CK Navigator
+The ATT&CK Navigator is commonly used to:
+- Highlight techniques used by a threat group
+- Visualize attack paths
+- Review detection coverage across tactics
+
+SOC teams often use the Navigator during investigations, threat research, and post-incident reviews.
+
+---
