@@ -30,13 +30,13 @@ Common uses include:
 MITRE ATT&CK organizes adversary behavior using three core concepts:
 
 - **Tactics**  
-  The adversary’s objective or goal at a specific stage of an attack.
+  What the attacker is trying to achieve.
 
 - **Techniques**  
-  The methods used to achieve that objective. Each technique is assigned a unique ID.
+  How the attacker does it. Each technique has a unique ID.
 
 - **Procedures**  
-  The real-world execution of a technique, often tied to specific tools, malware, or threat groups.
+  How a technique is carried out in practice (tools, malware, or threat groups).
 
 This structure allows analysts to describe attacks in a clear and consistent way.
 
