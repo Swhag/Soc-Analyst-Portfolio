@@ -57,20 +57,24 @@ SOC teams often use the Navigator during investigations, threat research and pos
 
 ## 5. Mapping Threat Intelligence to ATT&CK
 
-### Why Mapping Matters
-Threat intelligence reports often describe attacker activity in narrative form. Mapping that activity to ATT&CK techniques allows defenders to:
+### Why Mapping (connecting information) Matters
+**Threat intelligence** by itself is just information. 
+**Mapping** organizes that information so analysts can:
+
 - Standardize how attacks are described
 - Add meaningful context to alerts
+- Prioritize alerts
 - Translate intelligence into detections and response actions
+- Communicate clearly across teams
 
 ### Example Use Case
-When analyzing a known threat group, analysts can map observed behavior such as:
-- Initial access via phishing
-- Persistence mechanisms
-- Defense evasion techniques
-- Command-and-control methods
+When analyzing activity linked to a known threat group, analysts may map behavior such as:
+- Phishing based initial access
+- Persistence activity
+- Defense evasion
+- Command-and-control traffic
 
-This structured approach helps identify defensive gaps and improve future readiness.
+Mapping threat intelligence means aligning threat information with frameworks like MITRE ATT&CK to understand attacker behavior and guide detection and response.
 
 ---
 
