@@ -45,15 +45,15 @@ This structure allows analysts to describe attacks in a clear and consistent way
 ## 4. ATT&CK Matrix and Navigator
 
 ### ATT&CK Matrix
-The ATT&CK Matrix visually organizes tactics across the top and techniques underneath each tactic. This layout makes it easier to understand how attacks progress and where activity fits in the broader lifecycle.
+The ATT&CK Matrix shows tactics across the top and techniques beneath each tactic. It helps analysts see how activity fits within the overall attack lifecycle.
 
 ### ATT&CK Navigator
-The ATT&CK Navigator is commonly used to:
-- Highlight techniques used by a threat group
+The ATT&CK Navigator is used to:
+- Highlight techniques associated with a threat group
 - Visualize attack paths
 - Review detection coverage across tactics
 
-SOC teams often use the Navigator during investigations, threat research and post incident reviews.
+SOC teams commonly use the Navigator during investigations, threat research, and post-incident reviews.
 
 ---
 
