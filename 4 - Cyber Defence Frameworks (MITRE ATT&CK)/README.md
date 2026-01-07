@@ -13,13 +13,15 @@ Demonstrate the ability to analyze attacker activity and map observed behavior t
 ## 2. MITRE and ATT&CK Background
 
 ### MITRE
-MITRE is a non for-profit organization that develops research based frameworks and tools used across the cyber security industry. Many of these resources are widely adopted by SOCs, threat intelligence teams and security vendors.
+MITRE is an organization that develops frameworks and tools commonly used by security teams. Its work is widely referenced across SOCs, threat intelligence and security operations.
 
 ### MITRE ATT&CK
-MITRE ATT&CK is a globally accessible knowledge base of adversary tactics and techniques based on real world attacks. It provides a consistent way to describe how attackers operate and is commonly used to:
-- Add context to alerts and incidents
-- Map attacker behavior during investigations
-- Improve detection coverage and response planning
+MITRE ATT&CK is a framework that documents common attacker behaviors observed in real-world incidents. SOC analysts use it to describe what attackers are doing and where activity fits in the attack lifecycle.
+
+Common uses include:
+- Adding context to alerts
+- Mapping observed behavior during investigations
+- Supporting detection and response planning
 
 ---
 
