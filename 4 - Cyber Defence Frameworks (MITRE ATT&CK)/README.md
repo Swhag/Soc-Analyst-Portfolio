@@ -80,22 +80,14 @@ Mapping threat intelligence means aligning threat information with frameworks li
 
 ---
 
-
 ## 6. ATT&CK in SOC Operations
 
-ATT&CK is used across multiple security roles:
+ATT&CK is used across security roles in the following ways:
 
-- **SOC Analysts**  
-  Map alerts and events to tactics and techniques to improve triage and prioritization.
-
-- **Threat Intelligence Teams**  
-  Build threat profiles by mapping observed behavior to ATT&CK.
-
-- **Detection Engineers**  
-  Align SIEM and EDR rules with ATT&CK techniques to ensure meaningful coverage.
-
-- **Incident Responders**  
-  Use ATT&CK to visualize attack progression during investigations.
+- **SOC Analysts**: map alerts to tactics and techniques for triage and prioritization  
+- **Threat Intelligence**: map observed behavior to profile threats  
+- **Detection Engineering**: align detections with ATT&CK techniques  
+- **Incident Response**: track and visualize attack progression
 
 ---
 
