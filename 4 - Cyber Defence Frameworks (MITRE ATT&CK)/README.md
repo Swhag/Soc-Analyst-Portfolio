@@ -93,15 +93,17 @@ ATT&CK is used across security roles in the following ways:
 
 ## 7. MITRE CAR (Cyber Analytics Repository)
 
-### CAR Overview
-MITRE CAR is a collection of detection analytics mapped to ATT&CK techniques. Each analytic explains:
-- What behavior to detect
-- Why it matters
-- How it maps back to ATT&CK
+MITRE CAR focuses on **detection**, not just attacker behavior.
 
-### Defensive Value
-CAR helps bridge the gap between ATT&CK theory and real detections.  
-Many analytics include example queries for tools like Splunk, allowing ATT&CK techniques to be turned into practical SIEM detections.
+CAR is a collection of example detection analytics that are mapped to MITRE ATT&CK techniques. Each analytic describes:
+- What behavior to look for in logs
+- Why that behavior matters
+- Which ATT&CK technique it relates to
+- The defensive value of detecting it
+
+CAR helps bridge the gap between ATT&CK concepts and real world detections.
+
+Many CAR analytics include example logic or sample queries (often Splunk style), showing how ATT&CK techniques can be translated into practical SIEM detections.
 
 ---
 
