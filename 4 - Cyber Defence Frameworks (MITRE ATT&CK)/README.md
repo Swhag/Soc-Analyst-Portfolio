@@ -121,7 +121,7 @@ Many CAR analytics include example logic or sample queries (often Splunk style),
 
 *Example MITRE CAR analytic mapped to an ATT&CK technique.*
 
-<img src="images/mitre-car-analytic-example.png" alt="MITRE CAR analytic example1" width="700">
+<img src="images/mitre-car-analytic-example.png" alt="MITRE CAR analytic example" width="700">
 
 ---
 
