@@ -40,12 +40,20 @@ MITRE ATT&CK organizes adversary behavior using three core concepts:
 
 This structure allows analysts to describe attacks in a clear and consistent way.
 
+<img src="images/attack-technique-example.png" alt="MITRE ATT&CK technique example page" width="700">
+
+*Example ATT&CK technique page used to review attacker behavior.*
+
 ---
 
 ## 4. ATT&CK Matrix and Navigator
 
 ### ATT&CK Matrix
 The ATT&CK Matrix shows tactics across the top and techniques beneath each tactic. It helps analysts see how activity fits within the overall attack lifecycle.
+
+<img src="images/attack-matrix-overview.png" alt="MITRE ATT&CK Matrix overview" width="700">
+
+*ATT&CK Matrix view showing tactics and techniques.*
 
 ### ATT&CK Navigator
 The ATT&CK Navigator is used to:
@@ -55,12 +63,16 @@ The ATT&CK Navigator is used to:
 
 SOC teams commonly use the Navigator during investigations, threat research, and post-incident reviews.
 
+<img src="images/attack-navigator-example.png" alt="MITRE ATT&CK Navigator example" width="700">
+
+*Example ATT&CK Navigator view with techniques mapped during analysis.*
+
 ---
 
 ## 5. Mapping Threat Intelligence to ATT&CK
 
 ### Why Mapping (connecting information) Matters
-**Threat intelligence** by itself is just information. 
+**Threat intelligence** by itself is just information.  
 **Mapping** organizes that information so analysts can:
 
 - Standardize how attacks are described
@@ -104,6 +116,10 @@ CAR is a collection of example detection analytics that are mapped to MITRE ATT&
 CAR helps bridge the gap between ATT&CK concepts and real world detections.
 
 Many CAR analytics include example logic or sample queries (often Splunk style), showing how ATT&CK techniques can be translated into practical SIEM detections.
+
+<img src="images/mitre-car-analytic.png" alt="MITRE CAR analytic example" width="700">
+
+*Example MITRE CAR analytic mapped to an ATT&CK technique.*
 
 ---
 
