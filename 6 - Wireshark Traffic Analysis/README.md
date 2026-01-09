@@ -53,6 +53,6 @@ This project analyzes network traffic captures (PCAP/PCAPNG) in Wireshark to ide
   → ICMP *Destination Unreachable (Port Unreachable)* messages often map back to UDP scan attempts
 
 #### Useful filters
-tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024
-tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024
-icmp.type==3 and icmp.code==3
+tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024   
+tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024   
+icmp.type==3 and icmp.code==3   
