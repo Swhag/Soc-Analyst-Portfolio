@@ -20,18 +20,18 @@ This project analyzes network traffic captures (PCAP/PCAPNG) in Wireshark to ide
 
 ## Investigation Flow
 1. **Initial triage**
-- Broad filters and protocol overview
-- Identify anything noisy, repetitive or unexpected
+   - Broad filters and protocol overview
+   - Identify anything noisy, repetitive or unexpected
 
 2. **Pivot**
-- Narrow focus to a specific host, protocol or conversation
+   - Narrow focus to a specific host, protocol or conversation
 
 3. **Validation**
-- Inspect packet details and streams
-- Confirm whether behavior is expected or suspicious
+   - Inspect packet details and streams
+   - Confirm whether behavior is expected or suspicious
 
 4. **Summary**
-- Document what happened, who was involved and why it matters
+   - Document what happened, who was involved and why it matters
 
 ---
 
