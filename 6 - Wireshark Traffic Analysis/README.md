@@ -12,7 +12,7 @@ This project demonstrates how suspicious and anomalous network behavior can be i
 
 ---
 
-## Tooling
+## Tool
 - Wireshark
 
 ---
@@ -26,7 +26,26 @@ Effective traffic analysis focuses on:
 
 ---
 
+
+## Investigation Flow
+1. **Initial triage**
+   - Triage traffic to find what stands out
+
+
+2. **Pivot**
+   - Pivot on suspicious hosts or protocols
+
+3. **Validation**
+   - Validate behavior using packet details and streams
+
+
+4. **Summary**
+   - Summarize findings and next steps
+
+---
+
 ## Key Traffic Patterns and Indicators
+The following patterns represent common indicators encountered during SOC traffic analysis and are used to assess intent and escalation risk.
 
 ### 1) Nmap Scan Detection (TCP / UDP)
 **Purpose:** Recognize common network scanning behavior.
@@ -91,7 +110,7 @@ Effective incident response depends on accurately identifying affected assets an
   → May indicate tunneling or data exfiltration
 
 - **DNS queries with long or irregular subdomain names**  
-  → Frequently used to encode commands or data in DNS-based C2 channels
+  → Frequently used to encode commands or data in DNS based C2 channels
 
 #### Why this matters
 Trusted protocols such as ICMP and DNS are commonly abused to bypass security controls.
