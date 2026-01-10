@@ -1,55 +1,135 @@
 # Wireshark Traffic Analysis
 
 ## Overview
-This project focuses on analyzing network traffic in Wireshark to identify suspicious activity from a SOC analyst perspective. The goal is to demonstrate practical PCAP triage, anomaly detection, and clear documentation of findings.
+This project demonstrates how suspicious and anomalous network behavior can be identified through packet capture analysis in Wireshark. The emphasis is on recognizing traffic patterns, understanding their implications and determining when activity warrants escalation in a SOC environment.
 
 ---
 
-## Objective
-- Identify abnormal network behavior in packet captures
-- Correlate packet-level artifacts into a clear investigation narrative
-- Practice explaining findings the way a SOC analyst would
+## Purpose
+- Recognize malicious or abnormal network patterns
+- Apply protocol knowledge to real packet captures
+- Build a practical mental model for PCAP triage and investigation
 
 ---
 
-## Tools
+## Tooling
 - Wireshark
 
 ---
 
-## Investigation Flow
-1. **Initial triage**
-   - Triage traffic to find what stands out
-
-2. **Pivot**
-   - Pivot on suspicious hosts or protocols
-
-3. **Validation**
-   - Validate behavior using packet details and streams
-
-4. **Summary**
-   - Summarize findings and next steps
+## Analyst Mindset
+Effective traffic analysis focuses on:
+- Deviations from expected protocol behavior
+- Repeated or automated patterns
+- Inconsistencies between IP level and MAC level communication
+- Evidence that supports or refutes malicious intent
 
 ---
 
-
-## Traffic Analysis Notes
+## Key Traffic Patterns and Indicators
 
 ### 1) Nmap Scan Detection (TCP / UDP)
-**Purpose:** Recognize common scanning behavior in network traffic.
+**Purpose:** Recognize common network scanning behavior.
 
 #### What stands out
-- SYN-only attempts without completed handshakes  
+- **SYN-only attempts without completed handshakes**  
   → Repeated SYN packets from a single source strongly indicate scanning activity
 
-- Window size differences between scan types  
-  → Larger window sizes often align with TCP connect scans  
-  → Smaller window sizes are commonly seen in SYN scans
+- **Window size differences between scan types**  
+  → Larger window sizes are commonly associated with TCP connect scans  
+  → Smaller window sizes are often observed in SYN scans
 
-- ICMP responses indicating closed UDP ports  
+- **ICMP responses indicating closed UDP ports**  
   → ICMP *Destination Unreachable (Port Unreachable)* messages often map back to UDP scan attempts
 
-#### Useful filters
-tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024   
-tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024   
-icmp.type==3 and icmp.code==3   
+#### Why this matters
+Port scanning is frequently a reconnaissance step that precedes exploitation.
+
+---
+
+### 2) ARP Spoofing / MITM Indicators
+**Purpose:** Identify manipulation of IP to MAC relationships on a local network.
+
+#### What stands out
+- **Conflicting ARP responses for the same IP address**  
+  → Multiple MAC addresses claiming the same IP suggests ARP spoofing or poisoning
+
+- **Abnormal ARP request volume from a single host**  
+  → Excessive ARP traffic is often used to dominate ARP tables
+
+- **Unexpected traffic forwarding behavior**  
+  → Victim traffic routed through an intermediate MAC indicates MITM activity
+
+#### Why this matters
+ARP spoofing enables traffic interception, session hijacking and credential exposure.
+
+---
+
+### 3) Host and User Identification
+**Purpose:** Associate network activity with specific hosts and users.
+
+#### What stands out
+- **DHCP traffic revealing hostnames and MAC addresses**  
+  → Initial IP assignment often provides reliable device identity
+
+- **NBNS traffic exposing host naming behavior**  
+  → Useful for correlating traffic to specific systems on the network
+
+- **Kerberos requests revealing user identities and services**  
+  → Username fields (excluding `$` host accounts) help scope user involvement
+
+#### Why this matters
+Effective incident response depends on accurately identifying affected assets and users.
+
+---
+
+### 4) ICMP and DNS Tunneling Indicators
+**Purpose:** Recognize covert communication over trusted protocols.
+
+#### What stands out
+- **ICMP packets with unusual payload sizes or sustained volume**  
+  → May indicate tunneling or data exfiltration
+
+- **DNS queries with long or irregular subdomain names**  
+  → Frequently used to encode commands or data in DNS-based C2 channels
+
+#### Why this matters
+Trusted protocols such as ICMP and DNS are commonly abused to bypass security controls.
+
+---
+
+### 5) Cleartext Protocol Exposure (FTP / HTTP)
+**Purpose:** Identify risks and attack indicators in unencrypted traffic.
+
+#### What stands out
+- **Cleartext credential transmission in FTP sessions**  
+  → USER and PASS commands expose credentials directly in network traffic
+
+- **Repeated authentication failures**  
+  → Patterns may indicate brute force or password spraying activity
+
+- **Suspicious HTTP user agent strings**  
+  → Automated tooling or malformed agents often signal reconnaissance or exploitation attempts
+
+#### Why this matters
+Cleartext protocols increase the risk of credential compromise and lateral movement.
+
+---
+
+### 6) Encrypted Traffic Awareness (HTTPS)
+**Purpose:** Understand analytical limits and opportunities in encrypted traffic.
+
+#### What stands out
+- **TLS handshake metadata revealing communicating endpoints**  
+  → Client and Server Hello messages identify involved hosts
+
+- **Decryption increases visibility, not intent**  
+  → SSL key logs enable payload inspection, while metadata remains valuable even without decryption
+
+#### Why this matters
+Encrypted traffic still provides actionable context for detection and escalation.
+
+---
+
+## Summary
+This project presents a pattern based approach to network traffic analysis. The focus is on recognizing abnormal behavior, understanding its security impact and determining appropriate next steps within a SOC workflow.
