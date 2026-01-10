@@ -1,37 +1,34 @@
 # Wireshark Traffic Analysis
 
 ## Overview
-This project analyzes network traffic captures (PCAP/PCAPNG) in Wireshark to identify suspicious patterns and potential malicious activity. The focus is on practical SOC style investigation: filtering, pivoting, validating findings, and summarizing what happened.
+This project focuses on analyzing network traffic in Wireshark to identify suspicious activity from a SOC analyst perspective. The goal is to demonstrate practical PCAP triage, anomaly detection, and clear documentation of findings.
 
 ---
 
 ## Objective
-- Identify suspicious patterns in network traffic  
-- Correlate packet-level artifacts into clear findings  
-- Practice a repeatable traffic-analysis workflow aligned with SOC operations  
+- Identify abnormal network behavior in packet captures
+- Correlate packet-level artifacts into a clear investigation narrative
+- Practice explaining findings the way a SOC analyst would
 
 ---
 
 ## Tools
 - Wireshark
-- NetworkMiner
 
 ---
 
 ## Investigation Flow
 1. **Initial triage**
-   - Broad filters and protocol overview
-   - Identify anything noisy, repetitive or unexpected
+   - Triage traffic to find what stands out
 
 2. **Pivot**
-   - Narrow focus to a specific host, protocol or conversation
+   - Pivot on suspicious hosts or protocols
 
 3. **Validation**
-   - Inspect packet details and streams
-   - Confirm whether behavior is expected or suspicious
+   - Validate behavior using packet details and streams
 
 4. **Summary**
-   - Document what happened, who was involved and why it matters
+   - Summarize findings and next steps
 
 ---
 
