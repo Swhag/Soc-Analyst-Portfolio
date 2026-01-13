@@ -1,7 +1,9 @@
 # Wireshark Traffic Analysis
 
 ## Overview
-This project demonstrates how suspicious and anomalous network behavior can be identified through packet capture analysis in Wireshark. The emphasis is on recognizing traffic patterns, understanding their implications, and determining when activity warrants escalation in a SOC environment.
+This project demonstrates how suspicious and anomalous network behavior can be identified through packet capture analysis in Wireshark. The emphasis is on recognizing traffic patterns, understanding their implications and determining when activity warrants escalation in a SOC environment.
+
+---
 
 ## Purpose
 - Recognize malicious or abnormal network patterns
@@ -15,23 +17,36 @@ This project demonstrates how suspicious and anomalous network behavior can be i
 Effective traffic analysis focuses on:
 - Deviations from expected protocol behavior
 - Repeated or automated patterns
-- Inconsistencies between IP-level and MAC-level communication
+- Inconsistencies between IP level and MAC level communication
 - Evidence that supports or refutes malicious intent
 
+---
+
 ## Investigation Flow
-1. **Initial triage** – identify traffic that stands out  
-2. **Pivot** – focus on suspicious hosts or protocols  
-3. **Validation** – confirm behavior using packet details and streams  
-4. **Summary** – document findings and next steps  
+1. **Initial triage**  
+   Identify traffic that stands out
+
+2. **Pivot**  
+   Focus on suspicious hosts or protocols
+
+3. **Validation**  
+   Confirm behavior using packet details and streams
+
+4. **Summary**  
+   Document findings and next steps
+
+---
 
 ## Key Traffic Patterns and Indicators
 The following patterns represent common indicators encountered during SOC traffic analysis and are used to assess intent and escalation risk.
+
+---
 
 ### 1) Nmap Scan Detection (TCP / UDP)
 **Purpose:** Recognize common network scanning behavior.
 
 **What stands out**
-- **SYN-only attempts without completed handshakes**  
+- **SYN only attempts without completed handshakes**  
   → Repeated SYN packets from a single source strongly indicate scanning activity
 - **Window size differences between scan types**  
   → Larger window sizes are commonly associated with TCP connect scans  
@@ -42,8 +57,10 @@ The following patterns represent common indicators encountered during SOC traffi
 **Why this matters**  
 Port scanning is frequently a reconnaissance step that precedes exploitation.
 
+---
+
 ### 2) ARP Spoofing / MITM Indicators
-**Purpose:** Identify manipulation of IP-to-MAC relationships on a local network.
+**Purpose:** Identify manipulation of IP to MAC relationships on a local network.
 
 **What stands out**
 - **Conflicting ARP responses for the same IP address**  
@@ -54,7 +71,9 @@ Port scanning is frequently a reconnaissance step that precedes exploitation.
   → Victim traffic routed through an intermediate MAC indicates MITM activity
 
 **Why this matters**  
-ARP spoofing enables traffic interception, session hijacking, and credential exposure.
+ARP spoofing enables traffic interception, session hijacking and credential exposure.
+
+---
 
 ### 3) Host and User Identification
 **Purpose:** Associate network activity with specific hosts and users.
@@ -70,6 +89,8 @@ ARP spoofing enables traffic interception, session hijacking, and credential exp
 **Why this matters**  
 Effective incident response depends on accurately identifying affected assets and users.
 
+---
+
 ### 4) ICMP and DNS Tunneling Indicators
 **Purpose:** Recognize covert communication over trusted protocols.
 
@@ -77,10 +98,12 @@ Effective incident response depends on accurately identifying affected assets an
 - **ICMP packets with unusual payload sizes or sustained volume**  
   → May indicate tunneling or data exfiltration
 - **DNS queries with long or irregular subdomain names**  
-  → Frequently used to encode commands or data in DNS-based C2 channels
+  → Frequently used to encode commands or data in DNS based C2 channels
 
 **Why this matters**  
 Trusted protocols such as ICMP and DNS are commonly abused to bypass security controls.
+
+---
 
 ### 5) Cleartext Protocol Exposure (FTP / HTTP)
 **Purpose:** Identify risks and attack indicators in unencrypted traffic.
@@ -89,12 +112,14 @@ Trusted protocols such as ICMP and DNS are commonly abused to bypass security co
 - **Cleartext credential transmission in FTP sessions**  
   → USER and PASS commands expose credentials directly in network traffic
 - **Repeated authentication failures**  
-  → Patterns may indicate brute-force or password-spraying activity
-- **Suspicious HTTP user-agent strings**  
+  → Patterns may indicate brute force or password spraying activity
+- **Suspicious HTTP user agent strings**  
   → Automated tooling or malformed agents often signal reconnaissance or exploitation attempts
 
 **Why this matters**  
 Cleartext protocols increase the risk of credential compromise and lateral movement.
+
+---
 
 ### 6) Encrypted Traffic Awareness (HTTPS)
 **Purpose:** Understand analytical limits and opportunities in encrypted traffic.
@@ -108,5 +133,7 @@ Cleartext protocols increase the risk of credential compromise and lateral movem
 **Why this matters**  
 Encrypted traffic still provides actionable context for detection and escalation.
 
+---
+
 ## Summary
-This project presents a pattern-based approach to network traffic analysis. The focus is on recognizing abnormal behavior, understanding its security impact, and determining appropriate next steps within a SOC workflow.
+This project presents a pattern based approach to network traffic analysis. The focus is on recognizing abnormal behavior, understanding its security impact and determining appropriate next steps within a SOC workflow.
