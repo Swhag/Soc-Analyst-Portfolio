@@ -1,4 +1,4 @@
-# Caleb Kim | SOC Analyst Portfolio
+# SOC Analyst Portfolio
 
 👋 Hi, I'm **Caleb Kim** — an IT professional with 5+ years of enterprise experience currently transitioning into cybersecurity with a focus on SOC analysis, SIEM investigation, alert triage, and defensive security operations.
 
